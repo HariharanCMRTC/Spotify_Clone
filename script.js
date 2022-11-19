@@ -9,7 +9,7 @@ let gif = document.getElementById('gif');
 let masterPlaySongName = document.getElementById('masterPlaySongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
-let  = [
+let songs = [
     {songName : "Heat Waves - Glass Animal", fieldPath:"1.mp3", coverPath:"heatWaves.jpg"},
     {songName : "I ain't worried - OneRepublic", fieldPath:"2.mp3", coverPath:"TopGunMav.jpg"},
     {songName : "Kids - OneRepublic", fieldPath:"3.mp3", coverPath:"Kids.png"},
@@ -20,8 +20,8 @@ let  = [
 // Shows song details
 songItems.forEach((element, i) => {
     console.log(element, i);
-    element.getElementsByTagName("img")[0].src=[i].coverPath;
-    element.getElementsByClassName("songName")[0].innerText = [i].songName;
+    element.getElementsByTagName("img")[0].src=songs[i].coverPath;
+    element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
 
 })
 
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
         audioElement.src=`${songIndex+1}.mp3`;
-        masterPlaySongName.innerText=[songIndex].songName;
+        masterPlaySongName.innerText=songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
         gif.style.opacity=1;
@@ -84,7 +84,7 @@ document.getElementById('next').addEventListener('click', ()=>{
         songIndex +=1;
     }
     audioElement.src=`${songIndex+1}.mp3`;
-    masterPlaySongName.innerText=[songIndex].songName;
+    masterPlaySongName.innerText=songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     gif.style.opacity=1;
@@ -101,7 +101,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     }
     audioElement.src=`${songIndex+1}.mp3`;
     // SongName sync
-    masterPlaySongName.innerText=[songIndex].songName;
+    masterPlaySongName.innerText=songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     gif.style.opacity=1;
