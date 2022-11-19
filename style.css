@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+
+body{
+    background-image: url("GIF.gif");
+    
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+nav ul li{
+    padding: 0px 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+nav ul{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    color: white;
+    border-style: solid;
+    border-top: #055C9D;
+    border-left: #055C9D;
+    border-color: #055C9D;
+}
+
+nav{
+    font-family: 'Varela Round';
+    align-items: center;
+
+}
+
+.brand img{
+    width: 44px;
+    font-weight: bolder;
+    padding: 0px 4px;
+
+}
+
+.container{
+    min-height: 65vh;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    font-family: 'Varela Round';
+    display: flex;
+    border-radius: 12px;;
+    width: 70%;
+    margin: 23px auto;
+    padding: 34px;
+    border-color:#055C9D;
+    border-style:solid;
+}
+
+
+.bottom{
+    position: sticky;
+    background-color: black;
+    height: 110px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.icons{
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#myprogressBar{
+    text-align: center;
+    width: 90vw;
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 30px;
+}
+
+.songItem{
+    height: 60px;
+    display: flex;
+    justify-content:space-between;
+    width: 68vw;
+    align-items: center;
+    border-radius: 18px;
+    color: white;
+    margin: 12px 0;
+    background-color: #3B3B3B;
+    align-items: center;
+}
+
+.songItem img{
+    width: 45px;
+    margin: 0 20px;
+    border-radius: 10px;
+}
+
+.timeStamp{
+    margin: 0 15px;
+}
+
+.timeStamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 4vw;
+    color: white;
+    font-family: 'Varela Round';
+    display: flex;
+    text-align: center;
+    
+    align-content: center;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+    text-align: center;
+}
